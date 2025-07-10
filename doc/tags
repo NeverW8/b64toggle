@@ -1,0 +1,9 @@
+:B64decode	b64toggle.txt	/*:B64decode*
+:B64encode	b64toggle.txt	/*:B64encode*
+b64toggle-commands	b64toggle.txt	/*b64toggle-commands*
+b64toggle-configuration	b64toggle.txt	/*b64toggle-configuration*
+b64toggle-contents	b64toggle.txt	/*b64toggle-contents*
+b64toggle-introduction	b64toggle.txt	/*b64toggle-introduction*
+b64toggle-mappings	b64toggle.txt	/*b64toggle-mappings*
+b64toggle-usage	b64toggle.txt	/*b64toggle-usage*
+b64toggle.txt	b64toggle.txt	/*b64toggle.txt*

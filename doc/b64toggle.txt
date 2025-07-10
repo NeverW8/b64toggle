@@ -1,0 +1,61 @@
+*b64toggle.txt*  Base64 encoding/decoding for Neovim
+
+==============================================================================
+CONTENTS                                                    *b64toggle-contents*
+
+    1. Introduction ........................... |b64toggle-introduction|
+    2. Usage .................................. |b64toggle-usage|
+    3. Commands ............................... |b64toggle-commands|
+    4. Mappings ............................... |b64toggle-mappings|
+    5. Configuration .......................... |b64toggle-configuration|
+
+==============================================================================
+1. INTRODUCTION                                        *b64toggle-introduction*
+
+b64toggle.nvim is a simple plugin that allows you to encode and decode Base64
+content directly from visual selections in Neovim.
+
+==============================================================================
+2. USAGE                                                      *b64toggle-usage*
+
+1. Make a visual selection using `v`, `V`, or `<C-v>`
+2. Run one of the commands:
+   - `:B64encode` to encode the selected text to Base64
+   - `:B64decode` to decode the selected Base64 text to plain text
+
+==============================================================================
+3. COMMANDS                                                *b64toggle-commands*
+
+*:B64encode*
+    Encode the visually selected text to Base64.
+
+*:B64decode*
+    Decode the visually selected Base64 text to plain text.
+
+==============================================================================
+4. MAPPINGS                                                *b64toggle-mappings*
+
+The plugin doesn't set any default key mappings. You can add your own mappings
+in your Neovim configuration:
+
+>
+    " For Vim script
+    vnoremap <Leader>be :B64encode<CR>
+    vnoremap <Leader>bd :B64decode<CR>
+<
+
+Or in Lua:
+
+>
+    -- For Lua
+    vim.keymap.set('v', '<Leader>be', ':B64encode<CR>', { noremap = true })
+    vim.keymap.set('v', '<Leader>bd', ':B64decode<CR>', { noremap = true })
+<
+
+==============================================================================
+5. CONFIGURATION                                    *b64toggle-configuration*
+
+The plugin works out of the box without any configuration. It uses the system's
+`base64` command-line utility for encoding and decoding.
+
+ vim:tw=78:ts=8:ft=help:norl:
