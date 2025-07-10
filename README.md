@@ -20,17 +20,19 @@ A simple Neovim plugin for encoding and decoding Base64 content directly from vi
 ### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-{
-  "neverw8/b64toggle.nvim",
-  config = true,
-}
+    {
+        "NeverW8/b64toggle",
+        config = function()
+            require("b64toggle").setup()
+        end,
+    }
 ```
 
 ### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
-  'neverw8/b64toggle.nvim',
+  'Neverw8/b64toggle.nvim',
   config = function()
     require('b64toggle').setup()
   end
